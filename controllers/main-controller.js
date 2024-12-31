@@ -1,4 +1,4 @@
-const { default: puppeteer } = require("puppeteer");//integrate puppeteer
+
 const JobService = require("../services/JobService");// import job service
 const OpenAIAPI = require("../services/ChatGPTAPI");//import chat gpt service
 const BrowserService = require("../services/BrowserService");//import browser service
@@ -56,7 +56,7 @@ const generateSummaryBasedOnId =async(req,res,next)=>{
 
 
 //create job
-const createJob = async (req,res,next)=>{
+const createJob = async (req,res)=>{
     //parse url name as part of tne request body of the user
     const {url_name} = req.body;
 
