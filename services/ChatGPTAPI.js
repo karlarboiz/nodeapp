@@ -3,7 +3,7 @@ const { default: OpenAI } = require("openai");
 class OpenAIAPI {
     constructor() {
         this.client = new OpenAI({
-            apiKey: process.env.OPENAI_SECRET_KEY // This can be omitted if it's specified in the environment
+            apiKey: process.env.OPENAI_SECRET_KEY, // This can be omitted if it's specified in the environment
         });
     }
 
