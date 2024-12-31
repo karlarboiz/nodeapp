@@ -75,7 +75,7 @@ describe("Controller Integration Tests", () => {
             JobService.getJobHandler.mockRejectedValue(new Error("Job handler error"));
 
             await generateSummaryBasedOnId(mockReq, mockRes, mockNext);
-
+ 
             expect(JobService.getJobHandler).toHaveBeenCalledWith(1);
             expect(mockNext).toHaveBeenCalledWith(new Error("Job handler error"));
         });
