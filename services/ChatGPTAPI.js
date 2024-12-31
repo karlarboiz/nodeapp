@@ -3,10 +3,10 @@ const { default: OpenAI } = require("openai");
 class OpenAIAPI {
     constructor() {
         this.client = new OpenAI({
-            apiKey: "your_API_Key", // This can be omitted if it's specified in the environment
+            apiKey: process.env.OPENAI_SECRET_KEY // This can be omitted if it's specified in the environment
         });
     }
- 
+
     static async generateSummaryFromTextContent(textContext) {
         const client = new OpenAIAPI().client; // Create a new instance to access the client
 
