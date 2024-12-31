@@ -1,5 +1,5 @@
 const { default: OpenAI } = require("openai");
-
+ 
 class OpenAIAPI {
     constructor() {
         this.client = new OpenAI({
